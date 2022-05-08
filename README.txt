@@ -1,0 +1,1 @@
+El juego es un plataformero en donde pasas por 3 niveles, cada uno más dificil que el anterior. Es un juego simple, ya que solo vas a tener que concentrarte en correr, saltar y, eventualmente, disparar.

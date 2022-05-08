@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
 
     Vector3 velocity;
+    Vector3 firstPos;
     bool isGrounded;
 
     public float sprintStamina = 10f;
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        firstPos = transform.position;
     }
     void Update()
     {
@@ -78,10 +80,10 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        if (transform.position.y < -3)
+        /*if (transform.position.y < -3)
         {
             transform.position = new Vector3(0, 3, -3);
-        }
+        }*/
 
         if (!isGrounded && (controller.collisionFlags & CollisionFlags.Above) != 0)
         {
@@ -94,6 +96,22 @@ public class PlayerMovement : MonoBehaviour
             {
                 StaminaBar.instance.UseStamina(Time.deltaTime * sprintStamina);
             }  
+        }
+        if(transform.position.y < -3)
+        {
+            Respawn();
+        }
+    }
+    void Respawn()
+    {
+        transform.position = firstPos;
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "Portal")
+        {
+            ManagerJuego.NextScene();
+            firstPos = transform.position;
         }
     }
 }

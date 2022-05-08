@@ -24,13 +24,5 @@ public class TestSingleton : MonoBehaviour
         {
             ManagerJuego.NextScene();
         }
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            ManagerJuego.Pausa();
-        }
-        if(Input.GetKeyDown(KeyCode.O))
-        {
-            ManagerJuego.Despausar();
-        }
     }
 }

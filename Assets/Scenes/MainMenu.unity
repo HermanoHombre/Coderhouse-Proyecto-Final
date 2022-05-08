@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: PLAY
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 67aef242f31ced94fb6dc6ac5b84cc96, type: 2}
   m_sharedMaterial: {fileID: -8752415438805689533, guid: 67aef242f31ced94fb6dc6ac5b84cc96, type: 2}
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: OPTIONS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 67aef242f31ced94fb6dc6ac5b84cc96, type: 2}
   m_sharedMaterial: {fileID: -8752415438805689533, guid: 67aef242f31ced94fb6dc6ac5b84cc96, type: 2}
@@ -951,7 +951,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suburban Stories
+  m_text: GAME PROJECT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 67aef242f31ced94fb6dc6ac5b84cc96, type: 2}
   m_sharedMaterial: {fileID: -8752415438805689533, guid: 67aef242f31ced94fb6dc6ac5b84cc96, type: 2}
@@ -2377,7 +2377,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: QUIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 67aef242f31ced94fb6dc6ac5b84cc96, type: 2}
   m_sharedMaterial: {fileID: -8752415438805689533, guid: 67aef242f31ced94fb6dc6ac5b84cc96, type: 2}
