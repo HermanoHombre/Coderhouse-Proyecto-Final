@@ -2664,7 +2664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe571013055f74619b22262a7e416bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staminaBar: {fileID: 0}
+  staminaBar: {fileID: 1973749515}
   currentStamina: 0
   thereIsStamina: 0
 --- !u!114 &1973749515
@@ -2707,7 +2707,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 0
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1969122566}
   m_FillRect: {fileID: 1969122565}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
