@@ -7,6 +7,7 @@ public class EnemyMoveTest : MonoBehaviour
     public Transform playerTransform;
     Vector3 firstPos;
     public float speed = 8f;
+    public float detectionRange = 30;
     void Start()
     {
         firstPos = transform.position;
@@ -42,12 +43,20 @@ public class EnemyMoveTest : MonoBehaviour
         }
     }
 
+    void LookAt()
+    {
+        Quaternion rot = Quaternion.LookRotation(playerTransform.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rot , speed * Time.deltaTime);
+    }
+
     void Detection()
     {
-        if (Vector3.Distance(playerTransform.position, transform.position) < 50)
+        if (Vector3.Distance(playerTransform.position, transform.position) < detectionRange)
         {
-            speed = 22;
+            speed = 16;
+            detectionRange = 60;
             MoveTowardsPlayer();
+            LookAt();
         }
     }
 }

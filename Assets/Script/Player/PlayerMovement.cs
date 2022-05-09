@@ -114,4 +114,11 @@ public class PlayerMovement : MonoBehaviour
             firstPos = transform.position;
         }
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.name == "Enemy")
+        {
+            Respawn();
+        }
+    }
 }
