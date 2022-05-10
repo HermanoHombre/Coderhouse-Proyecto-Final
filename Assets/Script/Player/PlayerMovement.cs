@@ -25,7 +25,9 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     Vector3 firstPos;
     bool isGrounded;
-
+    int cantidad = 3;
+    public GameObject objetoAInstanciar;
+    public GameObject[] arrayObjetos;
     public float sprintStamina = 10f;
 
     void Start()
@@ -113,10 +115,18 @@ public class PlayerMovement : MonoBehaviour
             ManagerJuego.NextScene();
             firstPos = transform.position;
         }
+        if(other.gameObject.name == "Trigger")
+        {
+            for(int i=6; i > arrayObjetos.Length; i--)
+            {
+                GameObject go = Instantiate(objetoAInstanciar, new Vector3(i*7,7,12), Quaternion.identity);
+                arrayObjetos[1] = go;
+            }
+        }
     }
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Enemy")
+        if(collision.gameObject.name == "Bullet")
         {
             Respawn();
         }

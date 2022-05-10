@@ -8,6 +8,9 @@ public class EnemyMoveTest : MonoBehaviour
     Vector3 firstPos;
     public float speed = 8f;
     public float detectionRange = 30;
+    public float timebetweenattacks;
+    bool alreadyattacked;
+    public GameObject projectile;
     void Start()
     {
         firstPos = transform.position;
@@ -55,8 +58,23 @@ public class EnemyMoveTest : MonoBehaviour
         {
             speed = 16;
             detectionRange = 60;
-            MoveTowardsPlayer();
+            Shoot();
             LookAt();
         }
+    }
+    void Shoot()
+    {
+        if (!alreadyattacked)
+        {
+            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            alreadyattacked = true;
+            Invoke(nameof(ResetAttack), timebetweenattacks);
+        }
+    }
+    private void ResetAttack()
+    {
+        alreadyattacked = false;
     }
 }
